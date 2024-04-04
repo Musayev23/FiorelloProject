@@ -1,0 +1,40 @@
+footer{
+    margin-top: 50px;
+    padding: 80px 0 0;
+    h3{
+        font-size: 12px;
+        color: #000000;
+        margin-top: 20px;
+    }
+    ul{
+       margin-top: 25px; 
+    }
+    li{
+        line-height: 25px;
+    }
+    a{
+        font-size: 12px;
+        color: #8b8b8b;
+        &:hover{
+            color:#f34f3f ;
+        }
+    }
+    hr{
+        margin-top: 80px;
+    }
+    .footer_end{
+        padding: 10px 5px;
+        @include Flexible ($justify:space-between,$wrap:wrap);
+     
+        p{
+            font-size: 12px;
+            color: #afafaf;
+        }
+        .insta{
+            display: flex;
+            p{
+                margin-left: 30px;
+            }
+        }
+    }
+}

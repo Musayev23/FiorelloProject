@@ -1,0 +1,30 @@
+@mixin Flexible (
+    $justify:null,
+    $direction:null,
+    $align:null,
+    $wrap:null,
+    $gap:null,
+    $rgap:null,){
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: $align;
+    flex-wrap: $wrap;
+    gap: $gap;
+    row-gap: $rgap;
+};
+
+
+@mixin Text (
+    $size:null,
+    $weight:null,
+    $decoration:null,
+    $transform:null,
+    $talign:null,
+    ){
+    font-size: $size;
+    font-weight: $weight;
+    text-decoration: $decoration;
+    text-transform: $transform;
+    text-align: $talign;
+};

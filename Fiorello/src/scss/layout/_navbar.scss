@@ -1,0 +1,284 @@
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99999999;
+    }
+    .logo {
+      width: 205px;
+      padding: 35px 0;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .nav_home {
+      display: flex;
+      .menu_icon{
+        @media(min-width:1023px){
+          display: none;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        font-size: 14px;
+        li {
+          padding: 0 18px;
+          a {
+            color: #000;
+          }
+        }
+      }
+      .nav-one {
+        @media(max-width:1023px){
+          display: none;
+        }
+        a {
+          position: relative;
+          &::before {
+            content: "";
+            border: 1px solid #000;
+            position: absolute;
+            width: 0;
+            opacity: 0;
+            bottom: 0;
+            left: 0;
+          }
+          &:hover::before {
+            opacity: 1;
+            width: 100%;
+            transition: 0.5s ease-in-out;
+          }
+        }
+
+        .home {
+          padding: 30px;
+          .active{
+            position: relative;
+            &::before {
+              content: "";
+              border: 1px solid #000;
+              position: absolute;
+              width: 100%;
+              opacity: 1;
+              bottom: 0;
+              left: 0;
+            }
+          }
+          &:hover {
+            .main_home {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        .nav_pages {
+          padding: 30px;
+          &:hover {
+            .main_about {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        .nav_shop {
+          padding: 30px;
+          &:hover {
+            .products_shop {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        .portfolio {
+          padding: 30px;
+          &:hover {
+            .port_standart {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        .port_blog {
+          &:hover {
+            .port_masonry {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        .products_shop {
+          display: block;
+          display: flex;
+          position: absolute;
+          background-color: #ffff;
+          margin-top: 32px;
+          left: 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.5s ease-in-out;
+          h2 {
+            font-size: 20px;
+          }
+          padding: 20px;
+          ul {
+            display: block;
+            line-height: 35px;
+            padding: 30px;
+            margin-right: 70px;
+          }
+        }
+      }
+      .nav_cart {
+        @media(max-width:1023px){
+          display: none;
+        }
+        li {
+          padding: 0 8px;
+        }
+      }
+      .port_masonry {
+        display: block;
+        position: absolute;
+        background-color: #ffff;
+        line-height: 35px;
+        margin-top: 20px;
+        padding: 20px 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+        i {
+          margin-left: 30px;
+          font-size: 8px;
+        }
+      }
+      .main_home {
+        display: block;
+        position: absolute;
+        background-color: #ffff;
+        margin-top: 30px;
+        padding: 20px 5px;
+        line-height: 35px;
+        bottom: -50;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+      }
+      .main_about {
+        display: block;
+        position: absolute;
+        background-color: #ffff;
+        line-height: 35px;
+        margin-top: 35px;
+        padding: 20px 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+      }
+      .port_standart {
+        span {
+          margin-left: 30px;
+          font-size: 8px;
+        }
+        display: block;
+        position: absolute;
+        background-color: #ffff;
+        line-height: 35px;
+        margin-top: 32px;
+        padding: 20px 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+        .port_layout {
+          &:hover {
+            .port_two {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        .port_two {
+          display: block;
+          position: absolute;
+          background-color: #ffff;
+          line-height: 35px;
+          margin-top: 32px;
+          padding: 20px 10px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.5s ease-in-out;
+        }
+        .port_small {
+          display: block;
+          position: absolute;
+          background-color: #ffff;
+          line-height: 35px;
+          margin-top: 20px;
+          padding: 20px 10px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.5s ease-in-out;
+        }
+        .port_single {
+          &:hover {
+            .port_small {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+      .port_gallery{
+        display: block;
+          position: absolute;
+          left:100%;
+          top:40%;
+          background-color: #ffff;
+          line-height: 35px;
+          margin-top: 20px;
+          padding: 20px 10px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.5s ease-in-out;
+      }
+      .port_type{
+        &:hover{
+          .port_gallery{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      .port_class{
+        display: block;
+        position: absolute;
+        background-color: #ffff;
+        line-height: 35px;
+        margin-top: 20px;
+        padding: 20px 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+        i{
+          display: inline-block;
+          font-size: 8px;
+        }
+        a{
+          margin-left: 40px;
+        }
+      }
+       .port_element{
+        &:hover{
+          .port_class{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+       }
+    }
+  }
+
